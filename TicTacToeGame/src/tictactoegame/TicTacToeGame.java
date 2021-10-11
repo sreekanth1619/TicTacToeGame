@@ -1,10 +1,12 @@
 package tictactoegame;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class TicTacToeGame {
 	static Scanner scanner = new Scanner(System.in);
     static char [] board = new char[10];
+    static Random ran=new Random();
     static char playerChoice;
     static char computerChoice;
 
@@ -72,12 +74,27 @@ public class TicTacToeGame {
     	
     	}
     }
-
+    /* In this we have taken a random menthod to do a toss between Player and Computer
+    Winning candidate will play first.
+  */
+    static void TossToPlay(){
+    	int coin = ran.nextInt(2);
+    	if(coin==0) {
+    		System.out.println("Its Head player won the toss");
+    	}else {
+    		System.out.println("its Tail computer won the toss");
+    	}
+    }
+/**
+ * 
+ * main method to call the all static methods
+ */
     public static void main(String[] args) {
         System.out.println("Welcome to Tic Tac Toe Game");
         createBoard();
         choose();
         showBoard();
         PlayerMove();
+        TossToPlay();
     }
 	}
