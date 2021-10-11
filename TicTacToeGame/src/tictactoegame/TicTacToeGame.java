@@ -49,14 +49,24 @@ public class TicTacToeGame {
          System.out.println("-----------------");
          System.out.println(board[7] + "   |   " + board[8] + "   |   " + board[9]);
     }
+    
     /* Ability for user to make a move to a desired location in the board
      */
+    
     static void PlayerMove() {
     	System.out.println("game started its time to player move");
     	int indexNumber = scanner.nextInt();
     	if(indexNumber<1 && indexNumber>9) {
     		System.out.println("invalid choice");
-    	}else {
+    		
+    		/* In this we are checking for empty space.
+             */
+    		
+    	} else if 
+    		(board[indexNumber] != ' ') {
+                System.out.println("The Index is already occupied kindly choose other index ");
+                PlayerMove();
+    	}else{
     		board [indexNumber] = playerChoice;
     		showBoard();
     	
