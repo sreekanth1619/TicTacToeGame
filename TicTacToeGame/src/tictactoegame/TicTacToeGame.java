@@ -49,11 +49,25 @@ public class TicTacToeGame {
          System.out.println("-----------------");
          System.out.println(board[7] + "   |   " + board[8] + "   |   " + board[9]);
     }
+    /* Ability for user to make a move to a desired location in the board
+     */
+    static void PlayerMove() {
+    	System.out.println("game started its time to player move");
+    	int indexNumber = scanner.nextInt();
+    	if(indexNumber<1 && indexNumber>9) {
+    		System.out.println("invalid choice");
+    	}else {
+    		board [indexNumber] = playerChoice;
+    		showBoard();
+    	
+    	}
+    }
 
     public static void main(String[] args) {
         System.out.println("Welcome to Tic Tac Toe Game");
         createBoard();
         choose();
         showBoard();
+        PlayerMove();
     }
 	}
