@@ -38,10 +38,22 @@ public class TicTacToeGame {
             System.out.println("Invalid Choice! Enter a valid choice between X or O");
         }
     }
+    /* In this method we have to show case the Board.
+     */
+    static void showBoard() {
+    	System.out.println();     //used for empty line
+    	System.out.println("Tic Tac Toe Board");
+    	System.out.println(board[1] + "   | " + board[2] + "     | " + board[3] );
+    	 System.out.println("-----------------");
+         System.out.println(board[4] + "   |   " + board[5] + "   |   " + board[6]);
+         System.out.println("-----------------");
+         System.out.println(board[7] + "   |   " + board[8] + "   |   " + board[9]);
+    }
 
     public static void main(String[] args) {
         System.out.println("Welcome to Tic Tac Toe Game");
         createBoard();
         choose();
+        showBoard();
     }
 	}
